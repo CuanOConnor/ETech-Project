@@ -5,7 +5,7 @@
 
 This project contains a python file "script.py" that makes a HTTP request based on a model that uses machine learning to train and predict based on the data set powerproduction. 
 
-The jupyter notebook contains the data management portion of the project. It takes in the dataset and splits it into two sets X and Y. This is for comparison purposes so that the notebook can train and evaluate the data for making predictions in our webservice.
+The jupyter notebook contains the data management portion of the project. It takes in the dataset and trains the model, displaying 100 epochs and their associated loss values.
 
 The script.py file is our webservice file. It contains some simple http post requests, which sends the data to the browser and contains some html and css to be more user friendly with the GUI.
 
@@ -23,14 +23,17 @@ The model.h5 is our saved model from the jupyter notebook.
 - once the model is made, the script.py can be run in the terminal using "python script.py"
 - Alternatively the Docker file can be used as a platform for the program.
 
-**Note to anyone correcting this project**
+**Note**
 
-As of the current version there is an issue in sending the post to the browser:
-- a 405 error is displayed or something does not want to work
-- I've tried numerous fixes but none have worked.
-- I decided due to time constraints with other deadlines that this would have to do and i apologize for the state I left it in.
-- I hope that you will consider the work I put into the program sufficent to obtain some marks at least, I acknowledge that this submission is less than ideal, but i tried my best.
-
+As of the current version there is a known issue in sending the post to the browser:
+- The page is displayed and the functionality is all there, however the HTML does not update with the predicted speed value.
+- time constraints with other deadlines prevented me being able to spend time fixing it.
 ***
 
-Some references for code and inspirations can be found in the jupyter notebook.
+### *References*
+
+[1] Some inspiration for web serivce was taken from here; https://www.datacamp.com/community/tutorials/machine-learning-models-api-python
+
+[2] info on async functions; https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function
+
+[3] info on keras methods and functions adapted for the project; https://www.tensorflow.org/api_docs/python/tf/keras/Model

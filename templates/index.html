@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <div>
+        <h1>Predictions Based on Model</h1>
+        <form>
+            <div>
+                <p>Enter Speed</p>
+                <input type="text" name="speed" id="speed">
+            </div>
+            <button id="submit-btn">Submit</button>
+            <p>Predicted wind power:</p><p id="s"></p>
+        </form>
+    </div>
+
+    <script>
+        // data movement function that also takes in an error
+        async function postData(error)
+        {
+            error.preventDefault();
+            const speed = document.getElementById('speed').value
+            // response content
+            const response = await fetch("/predict", {
+                method:'POST',
+                headers:{
+                    'Content-Type':'application/json'
+                },
+                body: JSON.stringify({speed})
+            });
+
+            // update elenemt "s" with json response
+            var getResult = await response.json();
+            document.getElementById('s').innerHTML = getResult.predict[0];
+        }
+
+        // add listener to button and run function on click
+        document.getElementById("submit-btn").addEventListener("click", postData);
+    </script>
+</body>
+</html>
