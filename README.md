@@ -9,9 +9,9 @@ The jupyter notebook contains the data management portion of the project. It tak
 
 The script.py file is our webservice file. It contains some simple http post requests, which sends the data to the browser and contains some html and css to be more user friendly with the GUI.
 
-A Docker file is available for distributing the program.
+A Docker file is available the program.
 
-The html and css files are for the script.py file to display some data via the webservice.
+The html files are for the script.py file to display some data via the webservice.
 
 A requirements.txt file is also included containing the technologies needed and is included in the Docker file as a parameter.
 
@@ -32,7 +32,7 @@ As of the current version there is a known issue in sending the post to the brow
 
 ### *References*
 
-[1] Some inspiration for web serivce was taken from here; https://www.datacamp.com/community/tutorials/machine-learning-models-api-python
+[1] Some inspiration for web service was taken from here; https://www.datacamp.com/community/tutorials/machine-learning-models-api-python
 
 [2] info on async functions; https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function
 
