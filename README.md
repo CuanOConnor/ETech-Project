@@ -21,7 +21,7 @@ The model.h5 is our saved model from the jupyter notebook.
 
 - The notebook should be run in its entirety first, allowing the model.h5 to be generated.
 - once the model is made, the script.py can be run in the terminal using "python script.py"
-- Alternatively the Docker file can be used as a platform for the program.
+- The user should then navigate to the given URL which should be displayed in the terminal (localhost:9099)
 
 **Note**
 
